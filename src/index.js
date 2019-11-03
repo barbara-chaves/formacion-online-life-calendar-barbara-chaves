@@ -10,7 +10,7 @@ import {saveState, loadState} from './modules/localStorage'
 const loadedState = loadState()
 
 /* eslint-disable no-underscore-dangle */
-const store = createStore(
+export const store = createStore(
   reducer,
   loadedState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

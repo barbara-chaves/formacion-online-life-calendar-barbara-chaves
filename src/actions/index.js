@@ -27,3 +27,8 @@ export const selectStatus = (selectedStatus) => ({
   type: 'SELECT_STATUS',
   payload: selectedStatus
 })
+
+export const addStatus = () => ({
+  type: 'ADD_STATUS',
+})
+

@@ -75,7 +75,7 @@ const Form = ({ date, message, status, reset, save, newState, datesList }) => {
       <div className="form__status">
         <p className="form__status__text">Estado</p>
         <div className="form__status__wrap">
-          <label className="form__status__label">
+          <label className="form__status__label" tabindex="0">
             <MiniStatus status="happy" selected={isSelected("happy")} />
             <input
               type="radio"
@@ -85,7 +85,7 @@ const Form = ({ date, message, status, reset, save, newState, datesList }) => {
               checked={isChecked("happy")}
             />
           </label>
-          <label className="form__status__label">
+          <label className="form__status__label" tabindex="0">
             <MiniStatus status="sad" selected={isSelected("sad")} />
             <input
               className="form__input"
@@ -106,7 +106,7 @@ const Form = ({ date, message, status, reset, save, newState, datesList }) => {
           name="message"
           onChange={handleMessageChange}
           value={newState.message}
-          rows="3"
+          rows="2"
           placeholder="Si estás feliz puedes dejar un mensaje"
           disabled={isMessageDesabled()}
         />
