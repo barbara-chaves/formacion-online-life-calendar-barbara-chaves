@@ -1,0 +1,85 @@
+.form {
+  width: 30%;
+  background-color: rgba(48, 79, 255, 0.671);
+  height: 100%;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 0 3px 2px #858484, 0 0 4px 3px #9c9c9c;
+  color: white;
+  font-size: 1.25rem;
+  &__date {
+    display: flex;
+    flex-direction: column;
+  }
+  &__status {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0;
+    .selected {
+      box-shadow: 0 0 2px 2px #c8c8c8, 0 0 3px 3px #ffffff;
+      transform: scale(1.25);
+    }
+    &__wrap {
+      display: flex;
+      justify-content: space-around;
+    }
+    &__text {
+      margin: 0;
+    }
+    &__label {
+      cursor: pointer;
+      input {
+        display: none;
+      }
+    }
+  }
+  &__message {
+    display: flex;
+    flex-direction: column;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    .--btn {
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+  }
+  &__input {
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background-color: white;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 2px #c8c8c8, 0 0 3px 3px #ffffff;
+    }
+    &:disabled {
+      background-color: #dad8d8;
+    }
+  }
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}

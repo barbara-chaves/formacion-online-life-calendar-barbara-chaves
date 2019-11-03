@@ -1,0 +1,13 @@
+.stat {
+  width: 70%;
+  height: calc(100% - 60px);
+  margin: 0 30px;
+  display: flex;
+  .status__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+}

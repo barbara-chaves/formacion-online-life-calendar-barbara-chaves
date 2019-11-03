@@ -22,3 +22,8 @@ export const saveStatus = (newStatus) => ({
   type: 'SAVE_STATUS',
   payload: newStatus
 })
+
+export const selectStatus = (selectedStatus) => ({
+  type: 'SELECT_STATUS',
+  payload: selectedStatus
+})

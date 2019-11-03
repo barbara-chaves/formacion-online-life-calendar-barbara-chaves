@@ -1,0 +1,56 @@
+.ministatus {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  &__face {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    &__eyes::before,
+    &__eyes::after {
+      content: " ";
+      position: relative;
+      left: -5px;
+      top: 5px;
+      display: inline-block;
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background-color: black;
+    }
+    &__eyes::after {
+      position: relative;
+      left: 5px;
+    }
+    &__mouth {
+      position: relative;
+      display: inline-block;
+      top: -5px;
+      right: 0px;
+      width: 30px;
+      height: 20px;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-bottom: 1px solid black;
+      border-radius: 0 0 50% 50%;
+      background-color: transparent;
+    }
+
+    &.happy {
+      background-color: rgb(255, 230, 8);
+    }
+    &.sad {
+      background: linear-gradient(
+        rgb(107, 171, 255) 0%,
+        rgb(255, 230, 8) 50%,
+        rgb(255, 230, 8) 100%
+      );
+      .ministatus__face__mouth {
+        top: 15px;
+        border-top: 1px solid black;
+        border-bottom: none;
+        border-radius: 50% 50% 0 0;
+      }
+    }
+  }
+}
